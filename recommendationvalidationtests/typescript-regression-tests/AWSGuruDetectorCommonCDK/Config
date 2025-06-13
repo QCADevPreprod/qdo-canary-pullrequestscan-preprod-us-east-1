@@ -1,0 +1,58 @@
+# -*-perl-*-
+
+package.AWSGuruDetectorCommonCDK = {
+    interfaces = (1.1);
+
+    deploy = {
+        generic = true;
+    };
+
+    build-environment = {
+        chroot = basic;
+        network-access = blocked;
+    };
+
+    build-system = npm-pretty-much;
+    build-tools = {
+        1.1 = {
+            NodeJS = 14.x;
+            NpmPrettyMuch = 1.0;
+        };
+    };
+    dependencies = {
+        1.1 = {
+            SinglePassConstructs = 1.0;
+            SinglePassEC2CloudFormationScript = 1.0;
+            ChronicleInstaller = 1.0;
+            BONESIsengardAMITemplateAmazonLinux2 = tip;
+            BONESIsengardLaunchConfigAmazonLinux2 = 2.0;
+            BONESServiceTemplateAmazonLinux2 = 2.0;
+            BONESSSMPatchManagerTemplateAmazonLinux2 = tip;
+            InstanceReplacementPatchingCDKConstructs = 1.2;
+            InstanceReplacementPatchingScripts = 1.1;
+            BONESRequireEC2IMDSv2 = 2.0;
+        };
+    };
+    runtime-dependencies = {
+        1.1 = {
+            NodeJS = 14.x;
+            ChronicleInstaller = 1.0;
+            SinglePassEC2CloudFormationScript = 1.0;
+            BONESServiceTemplateAmazonLinux2 = 2.0;
+        };
+    };
+
+    test-dependencies = {
+        1.1 = {
+            BONESBastionTemplateAmazonLinux2 = 1.0;
+            SinglePassEC2CloudFormationScript = 1.0;
+        };
+    };
+
+    remove-dependencies = {
+        1.1 = {
+            InstanceReplacementPatchingScripts = 1.0;
+        };
+    };
+
+};

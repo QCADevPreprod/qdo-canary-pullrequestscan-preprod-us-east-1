@@ -1,0 +1,13 @@
+# Copyright Amazon.com, Inc. and its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+
+# Gradle
+.gradle/
+
+# IntelliJ
+/.idea/
+*.iml
+
+build/
+lib/
+.DS_Store
