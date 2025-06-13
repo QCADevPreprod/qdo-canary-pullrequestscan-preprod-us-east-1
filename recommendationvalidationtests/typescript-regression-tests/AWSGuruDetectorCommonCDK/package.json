@@ -1,0 +1,44 @@
+{
+  "name": "@amzn/aws_guru_detector_common_cdk",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "dist/lib/lib/app.js",
+  "types": "dist/types/lib/app.d.ts",
+  "scripts": {
+    "clean": "rm -rf build/ build coverage dist node_modules",
+    "clean-brazil-doc": "rm -rf ./build/brazil-documentation",
+    "prepublishOnly": "npm run build",
+    "watch": "tsc -w",
+    "build": "tsc",
+    "prepare": "npm run-script build",
+    "pretest": "npm run clean-brazil-doc",
+    "test": "",
+    "test-watch": "jest --watch",
+    "posttest": "npm run-script build"
+  },
+  "dependencies": {
+    "@amzn/brazil": "*",
+    "@amzn/hydra": "^3.0.0",
+    "@amzn/motecdk": "^6.0.0",
+    "@amzn/pipelines": "^3.0.117",
+    "@amzn/rip-helper": "*",
+    "constructs": "^3.3.69"
+  },
+  "devDependencies": {
+    "@amzn/instance-replacement-patching-cdkconstructs": "*",
+    "@amzn/singlepass": "^1.0.0",
+    "@monocdk-experiment/assert": "^1.101.0",
+    "@types/jest": "^24.0.18",
+    "@types/node": "*",
+    "dedent-js": "^1.0.1",
+    "jest": "^24.9.0",
+    "monocdk": "^1.100.0",
+    "ts-jest": "24.0.0",
+    "typescript": "^4.3.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ]
+  }
+}
